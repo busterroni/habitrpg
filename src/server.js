@@ -26,6 +26,9 @@ if (cluster.isMaster && (isDev || isProd)) {
   var path = require("path");
   var swagger = require("swagger-node-express");
 
+  // Setup translations
+  var i18n = require('./i18n');
+
   var middleware = require('./middleware');
 
   var TWO_WEEKS = 1000 * 60 * 60 * 24 * 14;
